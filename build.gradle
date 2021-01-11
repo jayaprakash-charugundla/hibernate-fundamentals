@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.jc'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.27.Final'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-orm', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-test', version: '5.3.2'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
